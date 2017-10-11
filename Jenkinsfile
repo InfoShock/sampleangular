@@ -50,14 +50,5 @@ pipeline {
         sh "echo 'Run Acceptance Tests'"
       }
     }
-
-  }
-  post {
-    success {
-      mail to:"john.knight@infosys.com", subject:"SUCCESS: ${currentBuild.fullDisplayName}", body: "Yay, we passed."
-    }
-    failure {
-      mail to:"john.knight@infosys.com", subject:"FAILURE: ${currentBuild.fullDisplayName}", body: "Boo, we failed."
-    }
   }
 }
