@@ -16,8 +16,6 @@ pipeline {
 
     // Build
     stage('Build') {
-      agent {
-      }
       steps {
         deleteDir()
         checkout scm
@@ -28,8 +26,6 @@ pipeline {
 
     // Static Code Analysis
     stage('Static Code Analysis') {
-      agent {
-      }
       steps {
         deleteDir()
         checkout scm
@@ -39,8 +35,6 @@ pipeline {
 
     // Unit Tests
     stage('Unit Tests') {
-      agent {
-      }
       steps {
         deleteDir()
         checkout scm
@@ -50,8 +44,6 @@ pipeline {
 
     // Acceptance Tests
     stage('Acceptance Tests') {
-      agent {
-      }
       steps {
         deleteDir()
         checkout scm
