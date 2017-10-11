@@ -34,7 +34,7 @@ pipeline {
       }
       steps {
         deleteDir()
-        #checkout scm
+        checkout scm
         sh "echo 'Run Static Code Analysis'"
       }
     }
