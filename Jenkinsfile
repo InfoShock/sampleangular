@@ -19,6 +19,8 @@ pipeline {
       steps {
         deleteDir()
         checkout scm
+	docker stop $(docker ps -a -q)
+	docker rm $(docker ps -a -q)
 	sh "npm install"
 	sh "ng build"
 	sh "docker build -t some-content-nginx ."
