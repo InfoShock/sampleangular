@@ -46,7 +46,7 @@ pipeline {
       }
       steps {
         deleteDir()
-        #checkout scm
+        checkout scm
         sh "echo 'Run Unit Tests'"
       }
     }
@@ -58,7 +58,7 @@ pipeline {
       }
       steps {
         deleteDir()
-        #checkout scm
+        checkout scm
         sh "echo 'Run Acceptance Tests'"
       }
     }
