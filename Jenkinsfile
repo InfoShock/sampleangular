@@ -21,8 +21,8 @@ pipeline {
         checkout scm
 	sh "npm install"
 	sh "ng build"
-	docker build -t some-content-nginx .
-	docker run -d -p 8082:80 some-content-nginx
+	sh "docker build -t some-content-nginx ."
+	sh "docker run -d -p 8082:80 some-content-nginx"
 
       }
     }
