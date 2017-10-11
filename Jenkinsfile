@@ -2,7 +2,7 @@
 
 pipeline {
 
-  agent none
+  agent any
 
   environment {
     git_commit_message = ''
@@ -17,7 +17,6 @@ pipeline {
     // Build
     stage('Build') {
       agent {
-        label 'any'
       }
       steps {
         deleteDir()
@@ -30,7 +29,6 @@ pipeline {
     // Static Code Analysis
     stage('Static Code Analysis') {
       agent {
-        label 'any'
       }
       steps {
         deleteDir()
@@ -42,7 +40,6 @@ pipeline {
     // Unit Tests
     stage('Unit Tests') {
       agent {
-        label 'any'
       }
       steps {
         deleteDir()
@@ -54,7 +51,6 @@ pipeline {
     // Acceptance Tests
     stage('Acceptance Tests') {
       agent {
-        label 'any'
       }
       steps {
         deleteDir()
